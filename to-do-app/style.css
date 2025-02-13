@@ -1,60 +1,77 @@
-*{
-    margin:0;
-    padding:0;
-    font-family:'Poppins', sans-serif;
-    box-sizing:border-box;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
-.container{
-    width:100%;
-    min-height:100vh;
-    background: linear-gradient(135deg, #153677,#4e085f);
+
+/* Container for the whole page */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
     padding: 10px;
 }
-.to-do-app{
-    width:100%;
+
+/* Styles for the To-Do App section */
+.to-do-app {
+    width: 100%;
     max-width: 540px;
-    background: white;
+    background: #FFFFFF;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
-.to-do-app h2{
-    color:#002765;
-    display:flex;
+
+/* Header styles for the To-Do App */
+.to-do-app h2 {
+    color: #002765;
+    display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.to-do-app h2 img{
-    width:30px;
-    margin-left:10px;
+
+/* Icon styling in the To-Do App header */
+.to-do-app h2 img {
+    width: 30px;
+    margin-left: 10px;
 }
-.row{
+
+/* Row container for input and button */
+.row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background:rgb(224, 222, 222);
+    background: rgba(224, 222, 222, 1); /* Light gray background */
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
 }
-input{
-    flex:1;
-    border:none;
-    outline:none;
-    background:transparent;
-    padding:10px;
+
+/* Input field styles */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
 }
-button{
-    border:none;
-    outline:none;
+
+/* Button styles */
+button {
+    border: none;
+    outline: none;
     padding: 16px 50px;
-    background: #ff5945;
+    background: #FF5945; /* Bright red-orange */
     color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
 }
-ul li{
+
+/* Styles for each task item in the list */
+ul li {
     list-style: none;
     font-size: 17px;
     padding: 12px 8px 12px 50px;
@@ -62,7 +79,9 @@ ul li{
     cursor: pointer;
     position: relative;
 }
-ul li::before{
+
+/* Icon for unchecked tasks */
+ul li::before {
     content: "";
     position: absolute;
     width: 28px;
@@ -74,25 +93,101 @@ ul li::before{
     top: 12px;
     left: 8px;
 }
-ul li.checked{
-    color:#555;
+
+/* Styles for a task marked as checked */
+ul li.checked {
+    color: #555555;
     text-decoration: line-through;
 }
-ul li.checked::before{
+
+/* Icon for checked tasks */
+ul li.checked::before {
     background-image: url(images/checked.png);
 }
-ul li span{
-    position:absolute;
+
+/* Delete button (span) styling for task items */
+ul li span {
+    position: absolute;
     right: 0px;
     top: 5px;
     width: 40px;
     height: 40px;
     font-size: 22px;
-    color:#555;
+    color: #555555;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
 }
-ul li span:hover{
-    background: #edeef0;
+
+/* Hover effect for the delete button */
+ul li span:hover {
+    background: #EDEEF0;
+}
+
+/* Styles for the Completed Tasks section */
+.completed-tasks {
+    width: 100%;
+    max-width: 540px;
+    background: #FFFFFF;
+    margin: 20px auto;
+    padding: 20px 30px 40px;
+    border-radius: 10px;
+}
+
+/* Header styles for Completed Tasks */
+.completed-tasks h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for each task item in the Completed Tasks container */
+#completed-container li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    position: relative;
+    color: #555555;
+    text-decoration: line-through;
+}
+
+/* Icon for completed tasks */
+#completed-container li::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(images/checked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+/* Delete button styling for completed tasks */
+#completed-container li span {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* Hover effect for delete button in completed tasks */
+#completed-container li span:hover {
+    background: #EDEEF0;
+}
+
+/* Styling for the image in the Completed Tasks header */
+.completed-tasks h2 img {
+    width: 30px;
+    margin-left: 10px;
 }

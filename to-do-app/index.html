@@ -1,25 +1,44 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for responsiveness and character encoding -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-App</title>
-    <link rel="stylesheet", href="style.css">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Main To-Do App Section -->
         <div class="to-do-app">
-            <h2>To-Do List<img src="images/icon.png" alt="to-do-Icon"></h2>
+            <h2>
+                To-Do List
+                <!-- Icon for the To-Do List header -->
+                <img src="images/icon.png" alt="to-do-Icon">
+            </h2>
             <div class="row">
-                <input type="text"id="input-box" placeholder="Add your task here">
+                <!-- Input field for entering new tasks -->
+                <input type="text" id="input-box" placeholder="Add your task here">
+                <!-- Button to trigger adding a new task -->
                 <button onclick="addTask()">Add</button>
             </div> 
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+            <!-- Container for active tasks -->
+            <ul id="list-container"></ul>
+        </div>
+
+        <!-- Completed Tasks Section -->
+        <div class="completed-tasks">
+            <h2>
+                Completed Tasks 
+                <!-- Icon for the Completed Tasks header -->
+                <img src="images/checked.png" alt="checked">
+            </h2>
+            <!-- Container for completed tasks -->
+            <ul id="completed-container"></ul>
         </div>
     </div>
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
